@@ -1,0 +1,325 @@
+// app.scss
+@import "variables";
+@import "/node_modules/bootstrap/scss/bootstrap.scss";
+
+* {
+  font-family: "Poppins";
+}
+// Main Page - Sidebar Start
+
+.sidebar {
+  width: 270px;
+  height: 100vh;
+  background-color: $bg-sidebar;
+  position: sticky;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  padding: 20px;
+  color: #fff;
+}
+
+.header-sidebar {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  gap: 15px;
+}
+
+.header-sidebar img {
+  background-color: #fff;
+  width: 33px;
+  height: 33px;
+  border-radius: 5px;
+  padding: 3px;
+}
+
+.header-sidebar p {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.user-data {
+  display: flex;
+  gap: 20px;
+}
+
+.user-data img {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+}
+
+.user-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.user-inner .nip {
+  color: $muted;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: $muted;
+}
+
+.menu-list ul {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-list ul li {
+  list-style: none;
+  font-size: 17px;
+  padding-block: 10px;
+  width: 100%;
+  text-align: start;
+  border-radius: 5px;
+  transition: padding 0.2s, background-color 0.2s, color 0.2s;
+}
+
+.menu-list ul li:hover,
+.menu-list ul .active li {
+  cursor: pointer;
+  color: #fff;
+  background-color: $accent;
+  padding-inline-start: 10px;
+  border-radius: 5px;
+}
+
+.menu-list a {
+  text-decoration: none;
+  color: $muted;
+  padding: 3px;
+  display: block;
+}
+
+// Main Page - Sidebar End
+
+// Navbar Start
+.logout-btn {
+  background: #fff;
+  border: none;
+  transition: padding ease-out 0.2s;
+}
+
+.logout-btn span {
+  color: $primary;
+}
+
+.header h5 {
+  font-weight: 500;
+}
+
+.header button:hover {
+  background: $bg-sidebar;
+  color: #fff;
+  padding: 3px 7px 3px 7px;
+  border-radius: 5px;
+}
+
+.search-group input {
+  border: none;
+}
+// Navbar End
+
+// Login Page Start
+
+.header-login {
+  background-color: #d9d9d9;
+  background-size: cover;
+  padding: 5rem;
+}
+
+.login-content {
+  padding-top: 2rem;
+  padding: 5rem;
+}
+
+.login-input ul li {
+  list-style: none;
+}
+
+.login-input input {
+  font-size: 15px;
+  margin-bottom: 20px;
+  width: 25%;
+  padding: 5px;
+  border: none;
+  border-bottom: 2px solid $primary;
+  outline: none;
+  transition: ease-in 0.2s;
+}
+
+.login-input input:focus {
+  width: 30%;
+}
+
+.button-login {
+  width: 25%;
+}
+
+.login-content img {
+  width: 650px;
+  height: 450px;
+}
+
+// Login Page End
+
+// Main Page - Table Daftar Akun Start
+
+.utilities button,
+input {
+  font-size: 13px;
+}
+
+.daftar-akun table,
+.tabel-rekap table,
+.tabel-setting table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.daftar-akun th,
+.tabel-rekap th,
+.tabel-setting th {
+  background-color: #f9f9f9;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.daftar-akun td,
+.tabel-rekap td,
+.tabel-setting td {
+  border: 1px solid #d9d9d9;
+  padding-inline: 10px;
+  padding-block: 5px;
+}
+
+.tabel-setting p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding-block: 10px;
+}
+
+// Main Page - Table Daftar Akun End
+
+// Buat Akun Start
+.input-group label,
+.status-label label {
+  font-weight: 600;
+  color: #434343;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  padding-inline: 15px;
+  border-radius: 5px;
+  border: 2px solid $secondary-color;
+  font-size: 15px;
+}
+
+.input-group input:focus {
+  outline: 2px solid $outline;
+}
+
+// Buat Akun End
+
+// Konfirmasi Start
+.confirm-content {
+  border: 3px solid $secondary-color;
+  border-style: dashed;
+  width: 100%;
+  height: max-content;
+}
+
+.form-confirm p {
+  width: 40vh;
+}
+.form-confirm .middle-point p {
+  width: 10vh;
+}
+// Konfirmasi End
+
+// Main Page - Rekap Absensi Start
+.bulan {
+  position: relative;
+  width: auto;
+  max-width: 100%;
+  select {
+    max-width: 100%;
+    padding: 8px 40px 8px 10px;
+    border: 2px solid $outline;
+    border-radius: 3px;
+    background-color: transparent;
+    appearance: none;
+    &:active,
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+  &:after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    margin-top: -2px;
+    right: 8px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #aaa;
+  }
+}
+
+.actions button {
+  width: 15%;
+}
+// Main Page - Rekap Absensi End
+
+// Main Page - Setting Start
+.settings input,
+.new-input input {
+  padding: 5px;
+  border-radius: 5px;
+  border: 2px solid #c5ced6;
+}
+
+.settings input:focus,
+.new-input input:focus {
+  outline: 1px solid $outline;
+}
+// Main Page - Setting End
+
+.setting-jam td {
+  padding: 7px;
+  padding-block: 10px;
+}
+
+.setting-jam input {
+  width: 100%;
+  padding: 5px;
+  border: 2px solid #c5ced6;
+  border-radius: 2px;
+}
+
+.spinner-load {
+  height: 100vh;
+}

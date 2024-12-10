@@ -1,0 +1,26 @@
+// _variables.scss
+$success: #28a745;
+$danger: #DA3732;
+$warning: #F17641;
+$secondary-color: #D2DBE2;
+$outline: #6558F5;
+$accent: #3E97FF;
+$bg-sidebar: #181C32;
+$muted: #A1A5B7;
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 758px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+
+$container-max-width: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px,
+    xxl: 1320px
+);
